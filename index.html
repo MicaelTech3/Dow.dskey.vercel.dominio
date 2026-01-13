@@ -67,17 +67,30 @@
             font-size: 13px;
             color: #6f86c9;
         }
+
+        .info {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #8fdfff;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <h1>D'SIGNER</h1>
-    <p>Download oficial do <strong>DSKEY</strong><br>
-       Digital Signage Offline & Online</p>
+
+    <p>
+        Download oficial do <strong>DSKEY</strong><br>
+        Digital Signage Offline & Online
+    </p>
+
+    <div class="info">
+        ⏬ O download inicia automaticamente
+    </div>
 
     <button class="btn-download" onclick="downloadApk()">
-        ⬇ BAIXAR DSKEY
+        ⬇ BAIXAR NOVAMENTE
     </button>
 
     <div class="footer">
@@ -87,10 +100,8 @@
 
 <script>
     function downloadApk() {
-        // Caminho direto para o APK
         const apkUrl = "./dskey.apk";
 
-        // Força download
         const a = document.createElement("a");
         a.href = apkUrl;
         a.download = "dskey.apk";
@@ -98,6 +109,11 @@
         a.click();
         document.body.removeChild(a);
     }
+
+    // 🔥 DOWNLOAD AUTOMÁTICO AO ENTRAR
+    window.addEventListener("load", () => {
+        setTimeout(downloadApk, 800); // pequeno delay para browsers aceitarem
+    });
 </script>
 
 </body>
