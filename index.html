@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>DSKEY • Download Oficial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at top, #0e132a, #050814);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            max-width: 420px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #00d4ff;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #b9dfff;
+            margin-bottom: 30px;
+        }
+
+        .btn-download {
+            display: inline-block;
+            padding: 18px 36px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #00ffcc;
+            background: #000;
+            border: 2px solid #00ffcc;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-download:hover {
+            background: #00ffcc;
+            color: #000;
+            box-shadow: 0 0 25px #00ffcc;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 13px;
+            color: #6f86c9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>D'SIGNER</h1>
+    <p>Download oficial do <strong>DSKEY</strong><br>
+       Digital Signage Offline & Online</p>
+
+    <button class="btn-download" onclick="downloadApk()">
+        ⬇ BAIXAR DSKEY
+    </button>
+
+    <div class="footer">
+        dsignertv.com.br
+    </div>
+</div>
+
+<script>
+    function downloadApk() {
+        // Caminho direto para o APK
+        const apkUrl = "./dskey.apk";
+
+        // Força download
+        const a = document.createElement("a");
+        a.href = apkUrl;
+        a.download = "dskey.apk";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+</script>
+
+</body>
+</html>
